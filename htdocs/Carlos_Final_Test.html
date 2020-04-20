@@ -111,6 +111,7 @@
 				// test if the edge of the array has been reached
 				if(xPic<0){
 					alert("This is the beginning of the picture collection. No more before this one. Sorry!");
+					xPic++;
 					return false;
 				}
 				document.getElementById("pic").src = "pictures/" + objArray[xPic].name + ".jpg";
@@ -128,6 +129,7 @@
 				// ... insert code
 				if(xPic==objArray.length){
 					alert("This is the end of the picture collection. No more beyond this one. Sorry!");
+					xPic--;
 					return false;
 				}
 				document.getElementById("pic").src = "pictures/" + objArray[xPic].name + ".jpg";
