@@ -110,7 +110,8 @@
 				// ... insert code
 				// test if the edge of the array has been reached
 				if(xPic<0){
-					xPic = objArray.length - 1;
+					alert("This is the beginning of the picture collection. No more before this one. Sorry!");
+					return false;
 				}
 				document.getElementById("pic").src = "pictures/" + objArray[xPic].name + ".jpg";
 				setTimeout(showHTML5Pic,wait);
@@ -126,7 +127,8 @@
 				// use the "showHTML5Pic" function to update "canvas" image and text boxes
 				// ... insert code
 				if(xPic==objArray.length){
-					xPic = 0;
+					alert("This is the end of the picture collection. No more beyond this one. Sorry!");
+					return false;
 				}
 				document.getElementById("pic").src = "pictures/" + objArray[xPic].name + ".jpg";
 				setTimeout(showHTML5Pic,wait);
@@ -140,11 +142,11 @@
 		<canvas id="canvas" width="300" height="200" style="border:1px solid #d3d3d3;">
 		</canvas>
 		<br /><br />
-		<input type="text" id="txtName" value="" />
+		Name: <input type="text" id="txtName" value="" />
 		<br /><br />
-		<input type="text" id="txtWidth" value="" />
+		Width: <input type="text" id="txtWidth" value="" />
 		<br /><br />
-		<input type="text" id="txtHeight" value="" />
+		Height: <input type="text" id="txtHeight" value="" />
 		<br /><br />
 		<button id="btnSave" onclick="saveProps();">Save</button>
 		<button id="btnPrevious" onclick="previousPic();">Previous</button>
